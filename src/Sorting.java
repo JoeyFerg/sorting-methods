@@ -1,6 +1,6 @@
 /**
  * Programmed by Joey Ferguson
- * 16 June 2017
+ * 5 February 2018
  */
 
 // This is a class that sorting algorithms can extend in order

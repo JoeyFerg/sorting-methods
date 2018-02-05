@@ -1,6 +1,6 @@
 /**
  * Programmed by Joey Ferguson
- * 16 June 2017
+ * 5 February 2018
  */
 
 public class Bubble extends Sorting {
@@ -19,16 +19,23 @@ public class Bubble extends Sorting {
         }
     }
 
+    private static Double[] populateArray(int numToSort) {
+        Double[] randomArray = new Double[numToSort];
+        for (int randoms = 0; randoms < numToSort; randoms++) {
+            randomArray[randoms] = StdRandom.uniform();
+        }
+
+        return randomArray;
+    }
+
     public static void main(String[] args) {
-        int N = 1000;
-        for (int numToSort = N; numToSort <= 16 * N; numToSort *= 2) {
-            Double[] randomArray = new Double[numToSort];
-            for (int randoms = 0; randoms < numToSort; randoms++) {
-                randomArray[randoms] = StdRandom.uniform();
-            }
+        int N = 10000;
+
+        for (int numToSort = N ; numToSort <= 64 * N; numToSort *= 2) {
+            Double[] arrayToSort = populateArray(numToSort);
 
             Stopwatch timer = new Stopwatch();
-            sort(randomArray);
+            sort(arrayToSort);
             StdOut.println(numToSort + " => " + timer.elapsedTime() + " seconds.");
         }
     }
