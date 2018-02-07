@@ -5,6 +5,8 @@ import java.text.DecimalFormat;
  * 5 February 2018
  */
 
+// A class that doubles the amount of random numbers and compares sorting algorithms against each other.
+// It also calculates the ratio of the previous time to the current time.
 public class DoublingTest {
 
     // Prints the results of calling multiple algorithms at once
@@ -55,6 +57,7 @@ public class DoublingTest {
         return (elapsedTime/prevTime);
     }
 
+    // Comment out algorithms that you don't want to run - insertion, selection, and bubble take a while!
     public static void main(String[] args) {
         StdOut.println("Insertion Sort");
         doublingTest(10000, 0);
